@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Routes configuration.
  *
@@ -41,6 +42,7 @@ use Cake\Routing\RouteBuilder;
  * inconsistently cased URLs when used with `:plugin`, `:controller` and
  * `:action` markers.
  */
+
 /** @var \Cake\Routing\RouteBuilder $routes */
 $routes->setRouteClass(DashedRoute::class);
 
@@ -50,12 +52,24 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, templates/Pages/home.php)...
      */
-    $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $builder->connect('/', ['controller' => 'Home', 'action' => 'index']);
 
-    /*
-     * ...and connect the rest of 'Pages' controller's URLs.
-     */
-    $builder->connect('/pages/*', 'Pages::display');
+    $builder->connect('/web-hosting', ['controller' => 'Home', 'action' => 'webHosting']);
+
+    $builder->connect('/about', ['controller' => 'Home', 'action' => 'about']);
+
+    $builder->connect('/analysis-domain', ['controller' => 'Home', 'action' => 'analysisDomain']);
+
+    $builder->connect('/register', ['controller' => 'Users', 'action' => 'register']);
+
+    $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+
+    $builder->connect('/privacy-policy', ['controller' => 'Home', 'action' => 'privacyPolicy']);
+
+    $builder->connect('/refund-policy', ['controller' => 'Home', 'action' => 'refundPolicy']);
+
+    $builder->connect('/terms-of-use', ['controller' => 'Home', 'action' => 'termsOfUse']);
+
 
     /*
      * Connect catchall routes for all controllers.
