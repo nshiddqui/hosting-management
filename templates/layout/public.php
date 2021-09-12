@@ -15,6 +15,12 @@
  * @var \App\View\AppView $this
  */
 
+$yuserverBaseDescription = 'the blogger and client best platform for blogging';
+$yuserverKeywords = (!empty($this->fetch('keywords')) ? $this->fetch('keywords') : 'yuserver,dns,domain,domain name,hosting,free web hosting,domain check,domain registration,free hosting,cheap hosting,website hosting');
+$yuserverTitle = ($this->request->getAttribute('here') === '/' ? PORJECT_NAME . ': ' . $yuserverBaseDescription : $this->fetch('title') . ' : ' . $yuserverBaseTitle);
+$yuserverDescription = (!empty($this->fetch('description')) ? $this->fetch('description') : 'Buy Best and cheap Unlimited SSD Web Hosting 2021 at Best Price start at ₹40! Free SSL, SiteLock, cPanel, Website Builder, Softaculous and many more.');
+$yuserverImage = $this->Url->build((!empty($this->fetch('image')) ? $this->fetch('image') : '/img/brand/dark.svg'), ['fullBase' => true]);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,33 +36,13 @@
     <link rel="canonical" href="<?= $this->Url->build(null, ['fullBase' => true]) ?>" />
 
     <!--  Social tags      -->
-    <meta name="keywords" content="impact design system, design system, login, form, table, tables, calendar, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, sidebar, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, car, fullcalendar, about us, invoice, account, chat, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, impact, impact ui kit, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit, impact dashboard">
-    <meta name="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
-
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Impact Design System by Creative Tim">
-    <meta itemprop="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
-
-    <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/296/original/opt_impact_thumbnail.jpg">
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@creativetim">
-    <meta name="twitter:title" content="Impact Design System by Creative Tim">
-
-    <meta name="twitter:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
-    <meta name="twitter:creator" content="@creativetim">
-    <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/296/original/opt_impact_thumbnail.jpg">
-
+    <?= $this->Html->meta('keywords', $yuserverKeywords) ?>
+    <?= $this->Html->meta('description', $yuserverDescription) ?>
 
     <!-- Open Graph data -->
-    <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Impact Design System by Creative Tim" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://demos.creative-tim.com/impact-design-system/" />
-    <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/296/original/opt_impact_thumbnail.jpg" />
-    <meta property="og:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included." />
-    <meta property="og:site_name" content="Creative Tim" />
+    <?= $this->Html->meta(['property' => 'og:title', 'content' => $yuserverTitle]) ?>
+    <?= $this->Html->meta(['property' => 'og:description', 'content' => $yuserverDescription]) ?>
+    <?= $this->Html->meta(['property' => 'og:image', 'content' => $yuserverImage]) ?>
 
     <!-- Fontawesome -->
     <?= $this->Html->css('/vendor/@fortawesome/fontawesome-free/css/all.min') ?>
