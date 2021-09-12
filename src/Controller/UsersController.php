@@ -20,7 +20,7 @@ class UsersController extends AppController {
     }
 
     public function register() {
-        return $this->redirect('https://portal.yuserver.in/login');
+        return $this->redirect('https://portal.shelty.in/login');
         if ($this->Auth->user()) {
             $this->Flash->error(__('You are already logged in, please logout for registered with new account.'));
             return $this->redirect('/dashboard');
@@ -42,7 +42,7 @@ class UsersController extends AppController {
     }
 
     public function login() {
-        return $this->redirect('https://portal.yuserver.in/login');
+        return $this->redirect('https://portal.shelty.in/login');
         $user = [];
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
