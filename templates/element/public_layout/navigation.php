@@ -39,7 +39,7 @@
                 </ul>
             </div>
             <div class="d-none d-lg-block @@cta_button_classes">
-                <?= $this->Html->link('Clinet Area', ['controller' => 'dashboard'], ['class' => 'btn btn-md btn-docs btn-outline-white animate-up-2 mr-3']) ?>
+                <?= $this->Html->link('Clinet Area', '/login', ['class' => 'btn btn-md btn-docs btn-outline-white animate-up-2 mr-3']) ?>
                 <?= $this->Html->link('<i class="fas fa-phone-alt mr-2"></i> 7210482353', 'tel:+917210482353', ['escape' => false, 'class' => 'btn btn-md btn-secondary animate-up-2']) ?>
             </div>
             <div class="d-flex d-lg-none align-items-center">
