@@ -19,7 +19,7 @@ $yuserverBaseDescription = 'Get cheap hosting with high performance hosting, lat
 $yuserverKeywords = (!empty($this->fetch('keywords')) ? $this->fetch('keywords') : 'yuserver,dns,domain,domain name,hosting,free web hosting,domain check,domain registration,free hosting,cheap hosting,website hosting');
 $yuserverTitle = ($this->request->getAttribute('here') === '/' ? PORJECT_NAME . ': ' . $yuserverBaseDescription : $this->fetch('title') . ' : ' . PORJECT_NAME);
 $yuserverDescription = (!empty($this->fetch('description')) ? $this->fetch('description') : 'Buy Best and cheap Unlimited SSD Web Hosting 2021 at Best Price start at ₹40! Free SSL, SiteLock, cPanel, Website Builder, Softaculous and many more.');
-$yuserverImage = $this->Url->build((!empty($this->fetch('image')) ? $this->fetch('image') : '/img/brand/dark.svg'), ['fullBase' => true]);
+$yuserverImage = $this->Url->build((!empty($this->fetch('image')) ? $this->fetch('image') : '/img/brand/dark.png'), ['fullBase' => true]);
 
 ?>
 <!DOCTYPE html>
