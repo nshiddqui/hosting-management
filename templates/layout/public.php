@@ -15,9 +15,9 @@
  * @var \App\View\AppView $this
  */
 
-$yuserverBaseDescription = 'the blogger and client best platform for blogging';
+$yuserverBaseDescription = 'Get cheap hosting with high performance hosting, latest features of cpanel and 24*7 days support';
 $yuserverKeywords = (!empty($this->fetch('keywords')) ? $this->fetch('keywords') : 'yuserver,dns,domain,domain name,hosting,free web hosting,domain check,domain registration,free hosting,cheap hosting,website hosting');
-$yuserverTitle = ($this->request->getAttribute('here') === '/' ? PORJECT_NAME . ': ' . $yuserverBaseDescription : $this->fetch('title') . ' : ' . $yuserverBaseTitle);
+$yuserverTitle = ($this->request->getAttribute('here') === '/' ? PORJECT_NAME . ': ' . $yuserverBaseDescription : $this->fetch('title') . ' : ' . PORJECT_NAME);
 $yuserverDescription = (!empty($this->fetch('description')) ? $this->fetch('description') : 'Buy Best and cheap Unlimited SSD Web Hosting 2021 at Best Price start at ₹40! Free SSL, SiteLock, cPanel, Website Builder, Softaculous and many more.');
 $yuserverImage = $this->Url->build((!empty($this->fetch('image')) ? $this->fetch('image') : '/img/brand/dark.svg'), ['fullBase' => true]);
 

@@ -1,3 +1,6 @@
+<?php
+$this->assign('title', 'About');
+?>
 <!-- Hero -->
 <section class="section-header pb-8 pb-lg-13 mb-4 mb-lg-6 bg-primary text-white">
     <div class="container">
