@@ -31,7 +31,7 @@
                            </div>
                            <div class="card-footer px-4 pb-4">
                                <!-- Button -->
-                               <?= $this->Html->link('Start from Beginner <span class="icon icon-xs ml-3"><i class="fas fa-arrow-right"></i></span>', '/cart?hosting=' . $price->name, ['escape' => false, 'class' => 'btn btn-block btn-outline-gray animate-up-2']) ?>
+                               <?= $this->Html->link('Start from ' . ucfirst(strtolower($price->name)) . ' <span class="icon icon-xs ml-3"><i class="fas fa-arrow-right"></i></span>', 'https://portal.shelty.in/cart.php?a=add&pid=' . $price->id, ['escape' => false, 'class' => 'btn btn-block btn-outline-gray animate-up-2']) ?>
                            </div>
                        </div>
                    </div>
